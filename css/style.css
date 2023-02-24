@@ -384,3 +384,28 @@ a {
   }
 }
 /*-----------------plan section ends-----------------*/
+
+/*-----------------media section starts-----------------*/
+
+.media {
+  display: flex;
+}
+
+.media__body h3 {
+  margin-top: 0;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
+}
+
+.media__image {
+  color: var(--color-primary);
+  font-size: 5rem;
+}
+
+/*-----------------media section ends-----------------*/
