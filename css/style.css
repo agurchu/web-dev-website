@@ -251,3 +251,26 @@ a {
 }
 
 /*-----------------buttons section ends-----------------*/
+
+/*-----------------inputs section starts-----------------*/
+
+.input {
+  border-radius: 30px;
+  border: 1px solid #ccd1d1;
+  color: var(--color-heading);
+  font-size: 2rem;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+}
+
+::placeholder {
+  color: #cbd7d1;
+}
+
+@media (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+/*-----------------inputs section ends-----------------*/
