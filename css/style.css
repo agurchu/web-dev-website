@@ -181,6 +181,9 @@ a {
 .icon-primary {
   fill: var(--color-primary);
 }
+.icon-stroke-white {
+  stroke: white;
+}
 
 .icon-white {
   fill: white;
@@ -579,3 +582,39 @@ a {
 }
 
 /*-----------------callout section ends-----------------*/
+
+/*-----------------collapsible section starts-----------------*/
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__header h2 {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s linear;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible-expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible-expanded .collapsible__content {
+  max-height: 100vh;
+  overflow: visible;
+  opacity: 1;
+}
+
+/*-----------------collapsible section ends-----------------*/
