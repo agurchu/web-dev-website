@@ -618,3 +618,46 @@ a {
 }
 
 /*-----------------collapsible section ends-----------------*/
+
+/*-----------------blocks section starts-----------------*/
+
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block p {
+  margin-bottom: 0;
+}
+
+.block-heading {
+  margin-top: 0;
+}
+
+.block-dark {
+  background: black;
+  color: #7b858b;
+}
+
+.block-dark .block-heading {
+  color: white;
+}
+
+.block-skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+}
+.block-skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/*-----------------blocks section ends-----------------*/
