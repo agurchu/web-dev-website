@@ -7,6 +7,7 @@
   --color-body-darker: #394141;
   --color-border: #ccd1d1;
   --border-radius: 30px;
+  --color-lightcolor: #d6dcdc;
 }
 
 *,
@@ -111,12 +112,12 @@ a {
 
 .badge-primary {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-lightcolor);
 }
 
 .badge-secondary {
   background: var(--color-secondary);
-  color: #fff;
+  color: var(--color-lightcolor);
 }
 
 .badge-small {
@@ -182,11 +183,11 @@ a {
   fill: var(--color-primary);
 }
 .icon-stroke-white {
-  stroke: white;
+  stroke: var(--color-lightcolor);
 }
 
 .icon-white {
-  fill: white;
+  fill: var(--color-lightcolor);
 }
 
 .icon-container {
@@ -223,17 +224,17 @@ a {
 
 .btn-primary {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-lightcolor);
 }
 
 .btn-secondary {
   background: var(--color-secondary);
-  color: white;
+  color: var(--color-lightcolor);
 }
 
 .btn-accent {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-lightcolor);
 }
 
 .btn-primary:hover {
@@ -259,14 +260,14 @@ a {
 }
 
 .btn-outline {
-  background: white;
+  background: var(--color-lightcolor);
   color: var(--color-heading);
   border: 2px solid var(--color-heading);
 }
 
 .btn-outline:hover {
   background: var(--color-heading);
-  color: white;
+  color: var(--color-lightcolor);
 }
 
 @media (min-width: 1024px) {
@@ -330,12 +331,12 @@ a {
 
 .card-primary .card__header {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-lightcolor);
 }
 
 .card-secondary .card__header {
   background: var(--color-secondary);
-  color: white;
+  color: var(--color-lightcolor);
 }
 
 .card-secondary .badge-secondary {
@@ -352,7 +353,7 @@ a {
 }
 
 .plan__name {
-  color: white;
+  color: var(--color-lightcolor);
   margin: 0;
   font-weight: 500;
   font-size: 2.5rem;
@@ -553,7 +554,7 @@ a {
 
 .callout-primary {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-lightcolor);
 }
 
 .callout__content {
@@ -562,7 +563,7 @@ a {
 
 .callout__content h2 {
   margin-top: 0;
-  color: white;
+  color: var(--color-lightcolor);
   font-size: 3rem;
 }
 
@@ -644,7 +645,7 @@ a {
 }
 
 .block-dark .block-heading {
-  color: white;
+  color: var(--color-lightcolor);
 }
 
 .block-skewed-right {
@@ -661,3 +662,78 @@ a {
   margin: 0 auto;
 }
 /*-----------------blocks section ends-----------------*/
+
+/*-----------------Navigation bar section starts-----------------*/
+
+.nav {
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+}
+
+.nav .list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav > a {
+  height: 50px;
+}
+
+.nav > a img {
+  width: auto;
+  height: 100%;
+}
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+  margin-top: 1rem;
+}
+
+.nav__item > a {
+  color: var(--color-lightcolor);
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: white;
+}
+
+.nav__toggle {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.nav.collapsible-expanded .nav__toggle {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav .list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: none;
+    margin: 0;
+  }
+  .nav > a {
+    height: 40px;
+  }
+}
+
+/*-----------------Navigation bar section ends-----------------*/
