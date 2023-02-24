@@ -238,11 +238,16 @@ a {
 }
 
 .btn-secondary:hover {
-  background: #01e9e9;
+  background: #00cc88;
 }
 
 .btn-accent:hover {
   background: #e72f00;
+}
+
+.btn-stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .btn-block {
@@ -530,3 +535,47 @@ a {
 }
 
 /*-----------------testimonial section ends-----------------*/
+
+/*-----------------callout section starts-----------------*/
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout__content h2 {
+  margin-top: 0;
+  color: white;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .grid-1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+}
+
+/*-----------------callout section ends-----------------*/
