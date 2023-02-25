@@ -118,7 +118,7 @@ a {
 
 .badge-secondary {
   background: var(--color-secondary);
-  color: var(--color-lightcolor);
+  color: white;
 }
 
 .badge-small {
@@ -213,15 +213,24 @@ a {
   border-radius: 40px;
   border: 0;
   cursor: pointer;
+  display: inline-block;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 1rem 0;
-  display: inline-block;
+  margin: 1rem;
+  outline: 0;
+
   padding: 2rem 3rem;
   text-align: center;
   text-transform: uppercase;
-  white-space: nowrap;
   transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
 }
 
 .btn-primary {
@@ -304,7 +313,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 .input-group .btn {
   margin: 4px;
@@ -768,3 +777,31 @@ a {
   }
 }
 /*-----------------Hero section ends-----------------*/
+
+/*-----------------domain block section starts-----------------*/
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 5px rgba(48, 158, 149, 0.3);
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/*-----------------domain block section ends-----------------*/
