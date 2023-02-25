@@ -18,6 +18,11 @@
 
 /*-----------------Typography section starts-----------------*/
 
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
 html {
   /* default font size is 16px => 62.5% of 16px = 10px*/
   font-size: 62.5%;
@@ -49,6 +54,7 @@ h2 {
 
 h3 {
   font-size: 3rem;
+  font-weight: 500;
 }
 
 p {
@@ -141,7 +147,6 @@ a {
 /*-----------------list section starts-----------------*/
 
 .list {
-  color: var(--color-heading);
   list-style: none;
   padding-left: 0;
 }
@@ -154,6 +159,7 @@ a {
 .list-tick {
   list-style-image: url(../icons/tick.svg);
   padding-left: 3rem;
+  color: var(--color-heading);
 }
 
 .list-tick .list__item {
@@ -185,6 +191,11 @@ a {
 }
 .icon-stroke-white {
   stroke: var(--color-lightcolor);
+}
+
+.icon-stroke-primary {
+  stroke: var(--color-primary);
+  z-index: 100;
 }
 
 .icon-white {
@@ -437,6 +448,7 @@ a {
 
 .media {
   display: flex;
+  margin-bottom: 4rem;
 }
 
 .media__title {
@@ -451,9 +463,8 @@ a {
   margin-top: 1rem;
 }
 
-.media__image {
-  color: var(--color-primary);
-  font-size: 5rem;
+.media__image .snap {
+  filter: brightness(500%);
 }
 
 /*-----------------media section ends-----------------*/
@@ -669,17 +680,19 @@ a {
   color: #7b858b;
 }
 
-.block-dark .block-heading {
+.block-dark h1,
+.block-dark h2,
+.block-dark h3 {
   color: var(--color-lightcolor);
 }
 
 .block-skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 85%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .block-skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container {
@@ -777,7 +790,6 @@ a {
 
 .hero {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -859,3 +871,24 @@ a {
 }
 
 /*-----------------features section ends-----------------*/
+/*-----------------showcase block section starts-----------------*/
+
+.block-showcase__image > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .block-showcase__image {
+    justify-self: end;
+  }
+  .block-showcase__image > img {
+    width: auto;
+    max-width: 700px;
+  }
+}
+
+/*-----------------showcase block section ends-----------------*/
